@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var magicBall: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     
     let ballArray = [#imageLiteral(resourceName: "ball1"), #imageLiteral(resourceName: "ball2"), #imageLiteral(resourceName: "ball3"), #imageLiteral(resourceName: "ball4"), #imageLiteral(resourceName: "ball5")]
     
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.becomeFirstResponder() // To get shake gesture
-        magicBall.isHidden = true
+        imageView.isHidden = true
     }
     
     override var canBecomeFirstResponder: Bool {
@@ -34,9 +34,9 @@ class ViewController: UIViewController {
             print("Shook!!!")
             
             // Make sure ball is unhidden
-            magicBall.isHidden = false
+            imageView.isHidden = false
             print("Ball Number: \(ballNumber + 1)\n")
-            magicBall.image = ballArray[ballNumber]
+            imageView.image = ballArray[ballNumber]
             
             // Find new random number for next ask
             ballNumber = Int.random(in:0...4)
@@ -47,10 +47,10 @@ class ViewController: UIViewController {
         print("Asked!!!")
         
         // Make sure ball is unhidden
-        magicBall.isHidden = false
+        imageView.isHidden = false
         // magicBall.image = ballArray.randomElement()
         print("Ball Number: \(ballNumber + 1)\n")
-        magicBall.image = ballArray[ballNumber]
+        imageView.image = ballArray[ballNumber]
         
         // Find new random number for next ask
         ballNumber = Int.random(in:0...4)

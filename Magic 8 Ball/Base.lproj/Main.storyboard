@@ -52,7 +52,7 @@
                         <color key="backgroundColor" red="0.65862328527442204" green="0.86359590014252563" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
-                        <outlet property="magicBall" destination="Dbw-4q-pz3" id="eHl-d8-1Xo"/>
+                        <outlet property="imageView" destination="Dbw-4q-pz3" id="eHl-d8-1Xo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
