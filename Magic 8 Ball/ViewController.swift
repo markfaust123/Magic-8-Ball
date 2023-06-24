@@ -31,11 +31,11 @@ class ViewController: UIViewController {
     // Enable detection of shake motion
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            print("Shake!!!")
+            print("Shook!!!")
             
             // Make sure ball is unhidden
             magicBall.isHidden = false
-            print("Ball Number: \(ballNumber)")
+            print("Ball Number: \(ballNumber + 1)\n")
             magicBall.image = ballArray[ballNumber]
             
             // Find new random number for next ask
@@ -44,10 +44,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func askButtonPressed(_ sender: UIButton) {
+        print("Asked!!!")
+        
         // Make sure ball is unhidden
         magicBall.isHidden = false
         // magicBall.image = ballArray.randomElement()
-        print("Ball Number: \(ballNumber)")
+        print("Ball Number: \(ballNumber + 1)\n")
         magicBall.image = ballArray[ballNumber]
         
         // Find new random number for next ask
